@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>고양이 소개 🐱</title>
+<style>
+  :root {
+    --bg: #fff8f0;
+    --ink: #3b2f2f;
+    --accent: #ff9f6b;
+    --card: #ffffff;
+    --soft: #ffe6d3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+  }
+  header {
+    text-align: center;
+    padding: 72px 20px 56px;
+    background: linear-gradient(180deg, var(--soft), var(--bg));
+  }
+  .cat-face { width: 140px; height: 140px; margin: 0 auto 20px; }
+  h1 { font-size: 2.4rem; }
+  header p { margin-top: 10px; font-size: 1.1rem; opacity: .8; }
+  main { max-width: 960px; margin: 0 auto; padding: 24px 20px 64px; }
+  h2 { margin: 40px 0 16px; font-size: 1.5rem; }
+  h2::after {
+    content: ""; display: block; width: 48px; height: 4px;
+    background: var(--accent); border-radius: 2px; margin-top: 6px;
+  }
+  .grid {
+    display: grid; gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .card {
+    background: var(--card); border-radius: 16px; padding: 20px;
+    box-shadow: 0 4px 14px rgba(0,0,0,.07);
+    transition: transform .2s;
+  }
+  .card:hover { transform: translateY(-4px); }
+  .card .emoji { font-size: 2rem; }
+  .card h3 { margin: 6px 0 4px; font-size: 1.1rem; }
+  .card p { font-size: .95rem; }
+  .breeds .card { text-align: center; }
+  .tag {
+    display: inline-block; background: var(--soft); border-radius: 999px;
+    padding: 2px 12px; font-size: .8rem; margin-top: 8px;
+  }
+  ul.facts { list-style: none; }
+  ul.facts li {
+    background: var(--card); border-left: 5px solid var(--accent);
+    border-radius: 8px; padding: 12px 16px; margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.05);
+  }
+  .meow {
+    display: block; margin: 28px auto 0; padding: 14px 32px;
+    font-size: 1.1rem; border: 0; border-radius: 999px;
+    background: var(--accent); color: #fff; cursor: pointer;
+  }
+  .meow:active { transform: scale(.96); }
+  #sound { text-align: center; min-height: 2em; margin-top: 12px; font-size: 1.3rem; }
+  footer { text-align: center; padding: 28px; font-size: .9rem; opacity: .7; }
+</style>
+</head>
+<body>
+
+<header>
+  <svg class="cat-face" viewBox="0 0 140 140" aria-label="고양이 얼굴">
+    <polygon points="22,58 28,10 62,34" fill="#f4a261"/>
+    <polygon points="118,58 112,10 78,34" fill="#f4a261"/>
+    <polygon points="30,50 32,22 54,36" fill="#ffc9a8"/>
+    <polygon points="110,50 108,22 86,36" fill="#ffc9a8"/>
+    <ellipse cx="70" cy="80" rx="52" ry="48" fill="#f4a261"/>
+    <ellipse cx="50" cy="74" rx="7" ry="9" fill="#3b2f2f"/>
+    <ellipse cx="90" cy="74" rx="7" ry="9" fill="#3b2f2f"/>
+    <circle cx="52" cy="71" r="2.5" fill="#fff"/>
+    <circle cx="92" cy="71" r="2.5" fill="#fff"/>
+    <polygon points="64,88 76,88 70,96" fill="#e76f51"/>
+    <path d="M70 96 Q62 106 54 100 M70 96 Q78 106 86 100" stroke="#3b2f2f" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M10 84 L40 88 M10 98 L40 94 M130 84 L100 88 M130 98 L100 94" stroke="#3b2f2f" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+  <h1>고양이 소개 🐱</h1>
+  <p>도도하고 귀여운 우리 곁의 작은 호랑이</p>
+</header>
+
+<main>
+  <section>
+    <h2>고양이는 어떤 동물일까요?</h2>
+    <p>
+      고양이는 식육목 고양이과에 속하는 동물로, 약 1만 년 전부터 사람과 함께 살아온 것으로 알려져 있습니다.
+      뛰어난 사냥 본능과 유연한 몸, 독립적인 성격 덕분에 전 세계에서 사랑받는 반려동물이 되었습니다.
+    </p>
+  </section>
+
+  <section>
+    <h2>고양이의 매력 포인트</h2>
+    <div class="grid">
+      <div class="card"><div class="emoji">👀</div><h3>밤에도 잘 보는 눈</h3><p>어두운 곳에서도 사람보다 훨씬 잘 볼 수 있어요.</p></div>
+      <div class="card"><div class="emoji">🐾</div><h3>조용한 발걸음</h3><p>발바닥 젤리 덕분에 소리 없이 걸어 다닙니다.</p></div>
+      <div class="card"><div class="emoji">🤸</div><h3>놀라운 유연성</h3><p>높은 곳에서 떨어져도 몸을 돌려 착지하는 능력이 있어요.</p></div>
+      <div class="card"><div class="emoji">😽</div><h3>골골송</h3><p>기분이 좋을 때 내는 그르릉 소리로 마음을 전해요.</p></div>
+    </div>
+  </section>
+
+  <section class="breeds">
+    <h2>인기 있는 품종</h2>
+    <div class="grid">
+      <div class="card"><div class="emoji">🐈</div><h3>코리안 숏헤어</h3><p>우리나라에서 가장 흔한 품종으로 건강하고 적응력이 좋아요.</p><span class="tag">활발함</span></div>
+      <div class="card"><div class="emoji">🐱</div><h3>러시안 블루</h3><p>푸른빛 회색 털과 초록 눈이 매력적이에요.</p><span class="tag">조용함</span></div>
+      <div class="card"><div class="emoji">😺</div><h3>스코티시 폴드</h3><p>접힌 귀와 동그란 얼굴이 특징이에요.</p><span class="tag">온순함</span></div>
+      <div class="card"><div class="emoji">😸</div><h3>페르시안</h3><p>길고 풍성한 털이 우아한 품종이에요.</p><span class="tag">느긋함</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>알아두면 좋은 사실</h2>
+    <ul class="facts">
+      <li>고양이는 하루의 절반 이상인 12~16시간을 잠자며 보냅니다.</li>
+      <li>고양이가 사람에게 하는 느린 눈 깜빡임은 애정 표현으로 알려져 있어요.</li>
+      <li>꼬리를 곧게 세우고 다가오면 반갑다는 뜻이에요.</li>
+      <li>고양이는 단맛을 느끼지 못하는 것으로 알려져 있습니다.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>고양이와 친해지는 법</h2>
+    <div class="grid">
+      <div class="card"><h3>1. 천천히 다가가기</h3><p>갑자기 만지지 말고 손가락을 내밀어 냄새를 맡게 해 주세요.</p></div>
+      <div class="card"><h3>2. 눈 맞춤은 부드럽게</h3><p>빤히 쳐다보기보다 천천히 눈을 깜빡여 보세요.</p></div>
+      <div class="card"><h3>3. 간식과 놀이</h3><p>낚싯대 장난감과 간식으로 즐거운 기억을 만들어 주세요.</p></div>
+    </div>
+  </section>
+
+  <button class="meow" id="meow">고양이 소리 내기 🐾</button>
+  <div id="sound"></div>
+</main>
+
+<footer>© 2026 고양이 소개 페이지 · GitHub Pages로 배포됨</footer>
+
+<script>
+  const sounds = ["야옹~ 🐱", "냐아앙 😺", "그르릉 그르릉 😽", "먀앙! 😸", "애옹? 🐈"];
+  const out = document.getElementById("sound");
+  document.getElementById("meow").addEventListener("click", () => {
+    out.textContent = sounds[Math.floor(Math.random() * sounds.length)];
+  });
+</script>
+</body>
+</html>
